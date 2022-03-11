@@ -1,0 +1,278 @@
+
+
+/*--------------------TAGS GLOBAIS--------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(90deg, #666 0%, #666 50%, #A9BF93 50%, #A9BF93 100%);
+}
+
+section .container{
+    position: relative;
+    min-width: 1100px;
+    min-height: 550px;
+    display: flex;
+    z-index: 1000;
+}
+
+/*----------------------------contactInfo-------------------------------------*/
+
+section .container .contactInfo{
+    position: absolute;
+    top: 35px;
+    width: 350px;
+    height: calc(100% - 70px);
+    background: #A9BF93;
+    z-index: 1;
+    padding: 40px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.25);
+}
+
+section .container .contactInfo h2{
+    font-size: 26px;
+    font-weight: 500;
+}
+
+section .container .contactInfo ul.info{
+    position: relative;
+    margin: 20px 0px;
+
+}
+
+section .container .contactInfo ul.info li{
+    position: relative;
+    list-style: none;
+    display: flex;
+    margin: 20px 0px;
+    cursor: pointer;
+    align-items: flex-start;
+}
+
+/*Vamos trabalhar com todos os primeiros spans de li*/
+section .container .contactInfo ul.info li span:nth-child(1){
+    width: 30px;
+    min-width: 30px;
+}
+
+section .container .contactInfo ul.info li span:nth-child(1) img{
+    max-width: 100%;
+    /*filter: invert();*/
+}
+
+/*Vamos trabalhar com todos os segundos spans de li*/
+section .container .contactInfo ul.info li span:nth-child(2){
+    margin-left: 10px;
+    font-weight: 300;
+
+}
+
+section .container .contactInfo ul.icons{
+    position: relative;
+    display: flex;
+}
+
+section .container .contactInfo ul.icons li{
+    list-style: none;
+    padding: 10px;
+}
+
+section .container .contactInfo ul.icons li a{
+    text-decoration: none;
+}
+
+/*----------------------------contactForm-------------------------------------*/
+
+section .container .contactForm{
+    position: absolute;
+    padding: 70px 50px;
+    padding-left: 250px;
+    margin-left: 150px;
+    width: calc(100% - 150px);
+    height: 100%;
+    background: #fff;
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+}
+
+section .container .contactForm h2{
+    color: #0f3659;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+section .container .contactForm .formBox form{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 30px;
+}
+
+section .container .contactForm .formBox form .inputBox{
+    position: relative;
+    margin-bottom: 35px;
+}
+
+section .container .contactForm .formBox form .w50{
+    width: 47%;
+}
+
+section .container .contactForm .formBox form .w100{
+    width: 100%;
+}
+
+section .container .contactForm .formBox form .inputBox input,
+section .container .contactForm .formBox form .inputBox textarea
+{
+    width: 100%;
+    resize: none;
+    padding: 5px 0;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #777;
+    font-size: 18px;
+    font-weight: 300;
+    color: #333;
+}
+
+section .container .contactForm .formBox form .inputBox textarea{
+    height: 120px;
+}
+
+section .container .contactForm .formBox form .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    pointer-events: none;
+    font-size: 16px;
+    font-weight: 300;
+
+    transition: 0.3s;
+}
+
+section .container .contactForm .formBox form .inputBox input:focus ~ span,
+section .container .contactForm .formBox form .inputBox input:valid ~ span,
+section .container .contactForm .formBox form .inputBox textarea:focus ~ span,
+section .container .contactForm .formBox form .inputBox textarea:valid ~ span{
+    transform: translateY(-20px);
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #0f3659;
+    font-weight: 500;
+}
+
+section .container .contactForm .formBox form .inputBox input[type="submit"]{
+    position: relative;
+    cursor: pointer;
+    background: #A9BF93;
+    border: none;
+    max-width: 150px;
+    padding: 15px;
+}
+
+section .container .contactForm .formBox form .inputBox input[type="submit"]:hover{
+    background: #61774b;
+}
+
+
+/*----------------------------Responsividade-------------------------------------*/
+@media screen and (max-width: 1200px) {
+    section .container{
+        width: 90%;
+        min-width: auto;
+        margin: 20px;
+        box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+
+    }
+
+    section .container .contactInfo{
+        top: 0;
+        height: 550px;
+        position: relative;
+        box-shadow: none;
+    }
+
+    section .container .contactForm{
+        position: relative;
+        width: calc(100% - 350px);
+        padding-left: 0;
+        margin-left: 0;
+        padding: 40px;
+        height: 550px;
+        box-shadow: none;
+    }
+}
+
+@media screen and (max-width: 990px) {
+    section {
+        background: #666;
+    }
+
+    section::before{
+        display: none;
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    section .container .contactForm{
+        width: 100%;
+        height: auto;
+
+    }
+
+    
+    section .container .contactInfo{
+        width: 100%;
+        height: auto;
+        flex-direction: row;
+    }
+
+    section .container .contactInfo ul.sci{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    section .container .contactForm{
+        padding: 25px;
+    }
+
+    section .container .contactInfo{
+        padding: 25px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    
+    section .container .contactInfo ul.sci{
+        margin-top: 50px;
+    }
+
+    section .container .contactForm .formBox form .w50{
+        width: 100%;
+    }
+
+    
+    section .container .contactForm .formBox form .w100{
+        width: 100%;
+    }
+}

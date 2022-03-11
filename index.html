@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Contact Formulário</title>
+    <link rel="Stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <section>
+        <div class="container">
+            <div class="contactInfo">
+                <div>
+                    <h2>Contato:</h2>
+                    <ul class="info">
+                        <li>
+                            <span><img src="./Img/location.png"></span>
+                            <span> Rua qualquer, 759<br>
+                                Florianópolis, SC<br>
+                                CEP:99999-999
+                            </span>
+                        </li>
+
+                        <li>
+                            <span><img src="./Img/mail.png"></span>
+                            <span> Lorem@gmail.com </span>
+                        </li>
+
+                        <li>
+                            <span><img src="./Img/call.png"></span>
+                            <span> +55 48 99999-9999 </span>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="icons">
+                    <li><a href="#"><img src="./Img/1.png"></a></li>
+                    <li><a href="#"><img src="./Img/2.png"></a></li>
+                    <li><a href="#"><img src="./Img/3.png"></a></li>
+                    <li><a href="#"><img src="./Img/4.png"></a></li>
+                    <li><a href="#"><img src="./Img/5.png"></a></li>
+                </ul>
+            </div>
+
+            <div class="contactForm">
+                <h2>Envie Sua Mensagem</h2>
+                <div class="formBox">
+                    <form method="post" action="https://api.staticforms.xyz/submit">
+                        <input type="hidden" name="accessKey" value="#">
+                        <!--Em value insira a chave key, fornecida pela plataforma staticforms.-->
+                        <input type="hidden" name="redirectTo" value="#">
+                        <!--Em value insira o domínio que vai redirecionar a página uma vez enviado o formulário.-->                        
+                        <div class="inputBox w50">
+                            <input type="text" name="name" required>
+                            <span>Primeiro Nome</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="name" required>
+                            <span>Sobrenome</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="email" name="email" required>
+                            <span>Seu melhor email</span>
+                        </div>
+                        <div class="inputBox w50">
+                            <input type="text" name="phone" required>
+                            <span>Celular</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <textarea name="message" required></textarea>
+                            <span>Escreva sua mensagem...</span>
+                        </div>
+                        <div class="inputBox w100">
+                            <input type="submit" value="Submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
